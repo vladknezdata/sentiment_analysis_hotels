@@ -1,0 +1,124 @@
+<!doctype html> 
+<html lang="en">
+<head>
+  <meta charset= "utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NYC</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="">New York City</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+              </div>
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Navigation
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="bos">Boston</a>
+                      <a class="dropdown-item" href="nyc">NYC</a>
+                      <a class="dropdown-item" href="sanfran">San Francisco</a>
+                      <a class="dropdown-item" href="analysis">Sentiment Analysis</a>
+                      <a class="dropdown-item" href="fill">Fill</a>
+                      <a class="dropdown-item" href="index">Home</a>
+                    
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="fill.html">Fill <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="fill.html">Fill <span class="sr-only">(current)</span></a>
+                      </li>
+                </ul>
+                <!-- <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+              </div>
+            </nav>
+          
+            <div class="container">
+              <div class="sentiment">
+                <h1 class="display-4">New York </h1>
+                <hr class="whatup" style >
+                <p><br>
+                  1. Positive Correlation between Review Scores and VADER Scores. Specifically, Rating Review Scores (1-5) suggest Greenwich, Carnegie, and Arlo NoMad are the top 3 hotels respectively; VADER Scores (-1 to +1) suggest Carnegie, Arlo NoMad, and Greenwich<br>
+                  2. MI - Top bigrams words are 'Highly Recommend, Call Desk, Definitely Stay'<br>
+                  3. PMI Positive - Top bi-gram positive words are 'Long Weekend, Breakfast Fast, Rooms Modern'<br>
+                  4. PMI Negative - Top bi-gram negative words are 'Called Desk, Didn't Work, Credit Card'
+                </p>
+            
+                <hr class="my-4">
+                <p>Count of Reviews by Hotel</p>
+                <img src="{{url_for('static', filename='NYCHotelRating.png')}}" alt="HotelReviewCount">
+    
+                <hr class="my-4">
+                <p>Average Count of Words per Label/Hotel</p>
+                <img src="{{url_for('static', filename='NYCHotelRating.png')}}" alt="AvgWordCount">
+    
+                <hr class="my-4">
+                <p>Average Count of Words per Score/Hotel</p>
+                <img src="{{url_for('static', filename='NYCtop10PosUni.png')}}" alt="AvgWordCountScore">
+    
+                <hr class="my-4">
+                <p>Count of Reviews per Rating</p>
+                <img src="{{url_for('static', filename='NYCtop10NegUni.png')}}" alt="RevRatingCount">
+    
+                <hr class="my-4">
+                <p>Count of Reviews by Hotel</p>
+                <img src="{{url_for('static', filename='NYCtop10PosBi.png')}}" alt="HotelReviewCount">
+    
+                <hr class="my-4">
+                <p>Average Count of Words per Label/Hotel</p>
+                <img src="{{url_for('static', filename='NYCtop10NegBi.png')}}" alt="AvgWordCount">
+    
+                <hr class="my-4">
+                <p>Average Count of Words per Score/Hotel</p>
+                <img src="{{url_for('static', filename='NYCratingScore.png')}}" alt="AvgWordCountScore">
+    
+                <hr class="my-4">
+                <p>Count of Reviews per Rating</p>
+                <img src="{{url_for('static', filename='NYCvaderScore.png')}}" alt="RevRatingCount">
+                <hr class="my-4">
+                <p>Count of Reviews by Hotel</p>
+                <img src="{{url_for('static', filename='NYCscore.png')}}" alt="HotelReviewCount">
+    
+                <hr class="my-4">
+                <p>Average Count of Words per Label/Hotel</p>
+                <img src="{{url_for('static', filename='NYCboxRating.png')}}" alt="AvgWordCount">
+    
+                <hr class="my-4">
+                <p>Average Count of Words per Score/Hotel</p>
+                <img src="{{url_for('static', filename='NYCboxVader.png')}}" alt="AvgWordCountScore">
+    
+                <hr class="my-4">
+                <p>Count of Reviews per Rating</p>
+                <img src="{{url_for('static', filename='NYCscatter.png')}}" alt="RevRatingCount">
+    
+            </p>
+            <hr class="my-4">
+            <p>Example Text</p>
+            <hr class="my-4">
+            <p>Example text</p>
+                <!-- <a class="btn btn-primary btn-lg" href="comparison.html" role="button">Learn more</a> -->
+              </div>
+            </div>
+
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                <script src="static/js/bootstrap.min.js"></script>
+   
+             </body>
+           </html>
